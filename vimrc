@@ -13,6 +13,8 @@ set tabstop=4
 " Use 4 spaces for (auto)indent
 set shiftwidth=4
 
+" Use 4 spaces for edit tab by <Tab> or <BS>
+set softtabstop=4
 
 " Use smart indent
 set smartindent
