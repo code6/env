@@ -63,6 +63,10 @@ set expandtab
 
 :colorscheme evening
 
+" http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns
+" highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+" au BufWinEnter * let w:m2=matchadd('OverLength', '\%>80v.\+', -1)
+
 
 "
 " MAPPINGS
@@ -119,6 +123,8 @@ call pathogen#infect()
 autocmd vimenter * if !argc() | NERDTree | endif
 "close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"hide pyc && others
+let NERDTreeIgnore=['\.o$', '\~$', '\.pyc$']
 
 " Pydiction
 let g:pydiction_location = '~/.vim/tools/pydiction/complete-dict'
@@ -133,3 +139,4 @@ let php_folding = 1
 "
 " Python
 "
+:autocmd BufRead,BufNewFile *.py set noexpandtab tabstop=4 shiftwidth=4 autoindent smartindent
