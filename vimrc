@@ -32,7 +32,7 @@ syntax on
 " GLOBAL SETTINGS
 "
 
-set mouse=a
+"set mouse=a [disable this for copying in vim]
 
 " Use menu to show command-line completion (in 'full' case)
 set wildmenu
@@ -112,6 +112,9 @@ cnoremap <C-F> <Right>
 " Switch tabs
 nmap <C-N> :tabnext<CR>
 nmap <C-P> :tabprevious<CR>
+
+" save a read-only file in vim using sudo
+cmap w!! %!sudo tee > /dev/null %
 
 "
 " Plugin

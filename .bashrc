@@ -17,3 +17,5 @@ function proml {
 }
 proml
 eval `dircolors $HOME/.dir_colors`
+
+[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
