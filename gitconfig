@@ -1,6 +1,8 @@
 [user]
 	name = code6 
 	email = wzc1989@gmail.com
+[color]
+    ui = auto
 [color "branch"]
     current = yellow reverse
     local = yellow
@@ -14,3 +16,7 @@
     added = yellow
     changed = green
     untracked = cyan
+[alias]
+	st = "status -s "
+[core]
+	filemode = false
