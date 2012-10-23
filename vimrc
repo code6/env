@@ -139,7 +139,5 @@ let g:pydiction_location = '~/.vim/tools/pydiction/complete-dict'
 
 let php_folding = 1 
 
-"
-" Python
-"
-:autocmd BufRead,BufNewFile *.py set noexpandtab tabstop=4 shiftwidth=4 autoindent smartindent
+:autocmd BufRead,BufNewFile *.py set expandtab tabstop=4 shiftwidth=4 autoindent smartindent
+
