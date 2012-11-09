@@ -1,9 +1,18 @@
+#!/bin/bash
+
+#soft 
+sudo apt-get install git
+sudo apt-get install screen
+
+PWD=`pwd`
+
 #link vim source
-ln -s vim ~/.vim
-ln -s vimrc ~/.vimrc
-ln -s .bashrc ~/.bashrc
-ln -s .screenrc ~/.screenrc
-ln -s .dir_colors ~/.dir_colors
+[ -f ~/.gitconfig ] || ln -s $PWD/gitconfig ~/.gitconfig
+[ -f ~/.vim ] || ln -s $PWD/vim ~/.vim
+[ -f ~/.vimrc ] || ln -s $PWD/vimrc ~/.vimrc
+[ -f ~/.bashrc ] || ln -s $PWD/.bashrc ~/.bashrc
+[ -f ~/.screenrc ] || ln -s $PWD/.screenrc ~/.screenrc
+[ -f ~/.dir_colors ] || ln -s $PWD/.dir_colors ~/.dir_colors
 
 #install nerdtree
 cd ~/.vim/bundle
