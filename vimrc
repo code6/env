@@ -141,3 +141,9 @@ let php_folding = 1
 
 :autocmd BufRead,BufNewFile *.py set expandtab tabstop=4 shiftwidth=4 autoindent smartindent
 
+"
+" C/C++
+"
+nmap <F5> :<C-U>make %:r && ./%:r<CR>
+
+
