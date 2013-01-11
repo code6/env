@@ -18,5 +18,7 @@
     untracked = cyan
 [alias]
 	st = "status -s "
+	br = branch
+	co = checkout
 [core]
 	filemode = false

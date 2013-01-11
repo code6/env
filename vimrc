@@ -140,3 +140,9 @@ let g:pydiction_location = '~/.vim/tools/pydiction/complete-dict'
 "
 
 let php_folding = 1 
+
+"
+" C/C++
+"
+nmap <F5> :<C-U>make %:r && ./%:r<CR>
+
