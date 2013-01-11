@@ -16,6 +16,8 @@ set shiftwidth=4
 " Use 4 spaces for edit tab by <Tab> or <BS>
 set softtabstop=4
 
+set smarttab
+
 " Use smart indent
 set smartindent
 
@@ -138,6 +140,3 @@ let g:pydiction_location = '~/.vim/tools/pydiction/complete-dict'
 "
 
 let php_folding = 1 
-
-:autocmd BufRead,BufNewFile *.py set expandtab tabstop=4 shiftwidth=4 autoindent smartindent
-
