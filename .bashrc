@@ -5,6 +5,8 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+PATH=$PATH:$HOME/bin
+
 # User specific aliases and functions
 
 function parse_git_branch {
@@ -18,4 +20,5 @@ function proml {
 proml
 eval `dircolors $HOME/.dir_colors`
 
-[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
+source ~/bin/git-completion.bash
+source ~/bin/git-flow-completion.bash
