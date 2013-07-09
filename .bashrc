@@ -18,7 +18,6 @@ function proml {
     PS1="[\u@\h:\W$GREEN\$(parse_git_branch)$COLOR_END]\$ "
 }
 proml
-eval `dircolors $HOME/.dir_colors`
 
 source ~/bin/git-completion.bash
 source ~/bin/git-flow-completion.bash

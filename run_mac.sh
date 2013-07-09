@@ -9,14 +9,16 @@ create_dir()
 
 link_script()
 {
-    list=$1
-    sourcedir=$2
-    targetdir=$3
+    sourcedir=$1
+    shift
+    targetdir=$1
+    shift
+    list=("${@}") 
     for s in "${list[@]}"
     do
         echo "link $s"
-        [ -f $targetdir/$s ] || ln -s $sourcedir/$s  $targetdir/$s
-    done
+	[ -f $targetdir/$s ] || ln -s $sourcedir/$s  $targetdir/$s
+   done
 }
 
 PWD=`pwd`
@@ -26,25 +28,25 @@ BINDIR=$HOME/bin
 ##build ~/bin
 create_dir $BINDIR
 BIN_SCRIPT_LIST=(
-    "git-completion.bash",
-    "git-flow-completion.bash",
+    "git-completion.bash"
+    "git-flow-completion.bash"
 );
-link_script $BIN_SCRIPT_LIST $PWD $BINDIR
-
+link_script $PWD $BINDIR "${BIN_SCRIPT_LIST[@]}" 
 
 HOME_SCRIPT_LIST=(
-    ".gitconfig",
-    ".vimrc",
-    ".bashrc",
-    ".screenrc",
-    ".dir_colors",
+    ".gitconfig"
+    ".vimrc"
+    ".vim"
+    ".bashrc"
+    ".screenrc"
+    ".dir_colors"
 );
-link_script $HOME_SCRIPT_LIST $PWD $HOME
-
+link_script $PWD $HOME "${HOME_SCRIPT_LIST[@]}" 
 
 
 #soft 
-brew install screen
+#brew install screen
+#brew install coreutils --default-names
 
 #install nerdtree
 cd ~/.vim/bundle
