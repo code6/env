@@ -26,3 +26,5 @@ source ~/bin/git-flow-completion.bash
 alias ll='ls -AlG'
 alias ls='ls -lG'
 alias vi='vim'
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
