@@ -47,6 +47,7 @@ link_script $PWD $HOME "${HOME_SCRIPT_LIST[@]}"
 #soft 
 #brew install screen
 #brew install coreutils --default-names
+#sudo easy_install pip
 
 #install nerdtree
 cd ~/.vim/bundle
