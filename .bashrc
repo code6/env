@@ -19,8 +19,8 @@ function proml {
 }
 proml
 
-source ~/bin/git-completion.bash
-source ~/bin/git-flow-completion.bash
+source $HOME/bin/git-completion.bash
+source $HOME/bin/git-flow-completion.bash
 
 
 alias ll='ls -AlG'
@@ -37,3 +37,9 @@ function java_use() {
     }
 
 java_use 1.6 1>/dev/null 2>&1
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/code6
+export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python"
+source /usr/local/bin/virtualenvwrapper.sh
+
