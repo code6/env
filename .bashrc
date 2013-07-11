@@ -29,6 +29,8 @@ alias vi='vim'
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+export EDITOR=vi
+
 alias java_ls='/usr/libexec/java_home -V 2>&1 | grep -E "\d.\d.\d_\d\d" | cut -d , -f 1 | colrm 1 4 | grep -v Home'
 
 function java_use() {
@@ -42,4 +44,5 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/code6
 export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python"
 source /usr/local/bin/virtualenvwrapper.sh
+workon dev
 
