@@ -26,8 +26,7 @@ source $HOME/bin/git-flow-completion.bash
 alias ll='ls -AlG'
 alias ls='ls -lG'
 alias vi='vim'
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+alias scp='scp -c arcfour'
 
 export EDITOR=vi
 
@@ -44,5 +43,7 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/code6
 export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python"
 source /usr/local/bin/virtualenvwrapper.sh
+source $HOME/bin/bashmarks.sh
 workon dev
 
+PATH=$PATH:$HOME/git/arcanist/bin:$HOME/.rvm/bin # Add RVM to PATH for scripting
