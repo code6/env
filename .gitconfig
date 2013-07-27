@@ -18,7 +18,18 @@
     untracked = cyan
 [alias]
 	st = "status -s "
-	br = branch
 	co = checkout
+    ls = "ls-files"
+    ci = commit  
+    br = branch -v  
+    #rt = reset --hard  
+    #unstage = reset HEAD  
+    #uncommit = reset --soft HEAD^  
+    l = log --pretty=oneline --abbrev-commit --graph --decorate
+    amend = commit --amend  
+    who = shortlog -n -s --no-merges  
+    g = grep -n --color -E  
+    cp = cherry-pick -x  
+    nb = checkout -b 
 [core]
 	filemode = false
