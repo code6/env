@@ -33,3 +33,5 @@
     nb = checkout -b 
 [core]
 	filemode = false
+[http]
+	postBuffer = 524288000
