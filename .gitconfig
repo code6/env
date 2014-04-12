@@ -23,8 +23,9 @@
     ci = commit  
     br = branch -v  
     #rt = reset --hard  
-    #unstage = reset HEAD  
-    #uncommit = reset --soft HEAD^  
+    sb = "show-branch --sha1-name"
+    unstage = reset HEAD  
+    uncommit = reset --soft HEAD^  
     l = log --pretty=oneline --abbrev-commit --graph --decorate
     amend = commit --amend  
     who = shortlog -n -s --no-merges  
