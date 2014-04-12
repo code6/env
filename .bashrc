@@ -46,7 +46,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 source $HOME/bin/bashmarks.sh
 workon dev
 
-PATH=$PATH:$HOME/git/arcanist/bin:$HOME/.rvm/bin:/usr/local/Cellar/maven/3.0.5/bin:/usr/local/Cellar/node/0.10.12/bin # Add RVM to PATH for scripting
+PATH=/usr/local/bin/:$PATH:$HOME/git/arcanist/bin:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export ANT_HOME=/Users/code6/Downloads/apache-ant-1.8.2/
 PATH=$PATH:$ANT_HOME/bin
