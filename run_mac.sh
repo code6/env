@@ -40,6 +40,7 @@ HOME_SCRIPT_LIST=(
     ".bashrc"
     ".screenrc"
     ".dir_colors"
+    ".tmux.conf"
 );
 link_script $PWD $HOME "${HOME_SCRIPT_LIST[@]}" 
 

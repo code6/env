@@ -6,6 +6,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 PATH=$PATH:$HOME/bin
+PATH=$HOME/homebrew/bin:$PATH
 
 # User specific aliases and functions
 
