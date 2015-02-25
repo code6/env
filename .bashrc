@@ -28,6 +28,8 @@ alias ll='ls -AlG'
 alias ls='ls -lG'
 alias vi='vim'
 alias scp='scp -c arcfour'
+#refer http://www.pythonforbeginners.com/pip/make-your-life-easier-virtualenvwrapper
+alias mkvirtualenv='mkvirtualenv --no-site-packages'
 
 export EDITOR=vi
 

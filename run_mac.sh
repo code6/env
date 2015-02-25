@@ -44,15 +44,25 @@ HOME_SCRIPT_LIST=(
 );
 link_script $PWD $HOME "${HOME_SCRIPT_LIST[@]}" 
 
-
-#soft 
-#brew install screen
-#brew install lftp 
-#brew install coreutils --default-names
-#sudo easy_install pip
-
 #install nerdtree
 cd ~/.vim/bundle
 git clone https://github.com/scrooloose/nerdtree.git
 
+
+#soft
+sudo xcodebuild -license
+#install xcode command line tools
+xcode-select --install
+
+#brew
+brew install tmux
+#refer https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
+brew install coreutils --default-names
+
+#pip
+sudo easy_install pip
+pip install virtualenv
+pip install virtualenvwrapper
+
 #other package
+
