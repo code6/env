@@ -7,6 +7,9 @@ filetype on
 filetype plugin on
 filetype indent on
 
+" turn off visual bell
+set novisualbell
+
 " Use 4 spaces for <Tab> and :retab
 set tabstop=4
 

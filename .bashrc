@@ -56,3 +56,21 @@ PATH=$PATH:$ANT_HOME/bin
 
 
 #export HADOOP_OPTS="-Djava.security.krb5.realm=OX.AC.UK -Djava.security.krb5.kdc=kdc0.ox.ac.uk:kdc1.ox.ac.uk"
+
+
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD/$HOME/~}\007"; echo " $(date +%y/%m/%dT%H:%M:%S) cd $(pwd); $(history 1 | sed "
+s/^[ ]*[0-9]*[ ]*\(.*\)$/\1/g")" >> ${HOME}/.history/$(date +%Y%m%d).log;'
+
+shopt -s histappend
+export HISTSIZE=1000000
+# don't put duplicate lines in the history. See bash(1) for more options
+export HISTCONTROL=ignoredups
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+alias h='cut -d \  -f5- ${HOME}/.history/????????.log | perl -e "print reverse <>" | grep -m10'
+alias lh='cut -d \  -f5- ${HOME}/.history/????????.log | perl -e "print reverse <>" | less -p'
+alias lh1='cut -d \  -f5- ${HOME}/.history/????????.log | perl -e "print reverse <>" | less'
+alias lh2='cut -d \  -f3- ${HOME}/.history/????????.log | perl -e "print reverse <>" | less'
