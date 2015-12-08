@@ -1,6 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/code6'
 let g:netrw_dirhist_2='/Users/code6/bin'
 let g:netrw_dirhist_3='/Users/code6/git/playground/python/ykq_39_net'
 let g:netrw_dirhist_4='/Users/zhichunw/git/playground/small-staffs/piaofang168'
+let g:netrw_dirhist_5='/Users/zhichunw/.virtualenvs/test/lib/python2.7/site-packages/marathoner-1.2.16-py2.7.egg/marathoner'
+let g:netrw_dirhist_6='/Users/zhichunw/bin'

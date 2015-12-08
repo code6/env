@@ -1,3 +1,27 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+" Plugin 'Valloric/YouCompleteMe'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'scrooloose/nerdtree'
+Bundle 'AndrewRadev/linediff.vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 "
 " MAIN CUSTOMIZATION FILE
 "
@@ -8,7 +32,7 @@ filetype plugin on
 filetype indent on
 
 " turn off visual bell
-set novisualbell
+set noeb vb t_vb=
 
 " Use 4 spaces for <Tab> and :retab
 set tabstop=4
@@ -120,11 +144,6 @@ nmap <C-P> :tabprevious<CR>
 
 " save a read-only file in vim using sudo
 cmap w!! %!sudo tee > /dev/null %
-
-"
-" Plugin
-"
-call pathogen#infect()
 
 " NerdTree
 " open a NERDTree automatically when vim starts up if no files were specified

@@ -30,6 +30,7 @@ alias vi='vim'
 alias scp='scp -c arcfour'
 #refer http://www.pythonforbeginners.com/pip/make-your-life-easier-virtualenvwrapper
 alias mkvirtualenv='mkvirtualenv --no-site-packages'
+alias yapf='yapf -i *.py --style="{based_on_style: google, indent_width: 4}"'
 
 export EDITOR=vi
 

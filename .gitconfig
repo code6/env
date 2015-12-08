@@ -34,5 +34,8 @@
     nb = checkout -b 
 [core]
 	filemode = false
+	editor = /Users/zhichunw/homebrew/bin/vim
 [http]
 	postBuffer = 524288000
+[credential]
+	helper = osxkeychain
