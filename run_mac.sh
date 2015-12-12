@@ -30,6 +30,7 @@ create_dir $BINDIR
 BIN_SCRIPT_LIST=(
     "git-completion.bash"
     "git-flow-completion.bash"
+    "bashmarks.sh"
 );
 link_script $PWD $BINDIR "${BIN_SCRIPT_LIST[@]}" 
 
@@ -44,25 +45,40 @@ HOME_SCRIPT_LIST=(
 );
 link_script $PWD $HOME "${HOME_SCRIPT_LIST[@]}" 
 
-#install nerdtree
-cd ~/.vim/bundle
-git clone https://github.com/scrooloose/nerdtree.git
+# create bash history dir
+mkdir  ~/.history
 
+# install Vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 
 #soft
 sudo xcodebuild -license
 #install xcode command line tools
 xcode-select --install
+#ruby
+curl -L https://get.rvm.io | bash -s stable --ruby
 
 #brew
+# install homebrew
+cd ~ && mkdir homebrew && curl -L https://github.com/Homebrew/homebrew/tarball/master | tar xz --strip 1 -C homebrew
+source ~/.bashrc
 brew install tmux
-#refer https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
-brew install coreutils --default-names
-
-#pip
-sudo easy_install pip
+brew install python
+pip install --upgrade distribute
+pip install --upgrade pip
 pip install virtualenv
 pip install virtualenvwrapper
+#mysql
+brew install mysql
+brew install node
+#ipython
+brew update # Always good to do
+brew install zeromq # Necessary for pyzmq
+brew install pyqt # Necessary for the qtconsole
+#refer https://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
+#brew install coreutils --default-names
+
 
 #other package
 

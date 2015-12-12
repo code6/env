@@ -5,8 +5,7 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-PATH=$PATH:$HOME/bin
-PATH=$HOME/homebrew/bin:$PATH
+PATH=$HOME/homebrew/bin:$HOME/bin:$HOME/.rvm/bin:$PATH
 
 # User specific aliases and functions
 
@@ -19,10 +18,6 @@ function proml {
     PS1="[\u@\h:\W$GREEN\$(parse_git_branch)$COLOR_END]\$ "
 }
 proml
-
-source $HOME/bin/git-completion.bash
-source $HOME/bin/git-flow-completion.bash
-
 
 alias ll='ls -AlG'
 alias ls='ls -lG'
@@ -43,17 +38,15 @@ function java_use() {
 
 java_use 1.6 1>/dev/null 2>&1
 
+source $HOME/bin/git-completion.bash
+source $HOME/bin/git-flow-completion.bash
+export VIRTUALENVWRAPPER_PYTHON=/Users/zhichunw/homebrew/bin/python
+source $HOME/homebrew/bin/virtualenvwrapper.sh
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/code6
-export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python"
-source /usr/local/bin/virtualenvwrapper.sh
 source $HOME/bin/bashmarks.sh
 workon dev
-
-PATH=/usr/local/bin/:$PATH:$HOME/git/arcanist/bin:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-export ANT_HOME=/Users/code6/Downloads/apache-ant-1.8.2/
-PATH=$PATH:$ANT_HOME/bin
 
 
 #export HADOOP_OPTS="-Djava.security.krb5.realm=OX.AC.UK -Djava.security.krb5.kdc=kdc0.ox.ac.uk:kdc1.ox.ac.uk"
